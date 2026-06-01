@@ -33,7 +33,7 @@
     overflow-x: hidden;
   }
 
-  /* ── NAV ── */
+  /* NAV */
   nav {
     position: fixed; top: 0; left: 0; right: 0; z-index: 100;
     background: rgba(250,250,248,0.94);
@@ -76,7 +76,7 @@
   }
   .nav-cta:hover { background: var(--navy-light); }
 
-  /* ── HERO ── */
+  /* HERO */
   #hero {
     min-height: 100vh;
     display: grid;
@@ -121,10 +121,7 @@
     margin-bottom: 1.5rem;
     letter-spacing: -0.01em;
   }
-  .hero-name em {
-    font-style: italic;
-    color: var(--gold-light);
-  }
+  .hero-name em { font-style: italic; color: var(--gold-light); }
   .hero-tagline {
     font-size: 1rem;
     color: rgba(250,250,248,0.65);
@@ -133,10 +130,7 @@
     margin-bottom: 2.5rem;
     font-weight: 300;
   }
-  .hero-badges {
-    display: flex; flex-wrap: wrap; gap: 0.5rem;
-    margin-bottom: 2.5rem;
-  }
+  .hero-badges { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 2.5rem; }
   .badge {
     font-size: 0.72rem;
     letter-spacing: 0.1em;
@@ -183,8 +177,7 @@
     position: relative;
   }
   .hero-photo-placeholder {
-    position: absolute; top: 3rem; left: 3.5rem; right: 3.5rem;
-    bottom: 10rem;
+    position: absolute; top: 3rem; left: 3.5rem; right: 3.5rem; bottom: 10rem;
     background: #D9D5CC;
     border-radius: 2px;
     display: flex; align-items: center; justify-content: center;
@@ -201,10 +194,7 @@
     letter-spacing: 0.08em;
     text-transform: uppercase;
   }
-  .hero-stat-row {
-    display: flex; gap: 2rem;
-    z-index: 1; position: relative;
-  }
+  .hero-stat-row { display: flex; gap: 2rem; z-index: 1; position: relative; }
   .hero-stat-num {
     font-family: 'Cormorant Garamond', serif;
     font-size: 2.2rem;
@@ -220,7 +210,7 @@
     margin-top: 0.25rem;
   }
 
-  /* ── SECTIONS ── */
+  /* SECTIONS */
   section { padding: 5rem 0; }
   .container { max-width: 1080px; margin: 0 auto; padding: 0 2.5rem; }
   .section-label {
@@ -238,13 +228,9 @@
     line-height: 1.15;
     margin-bottom: 2.5rem;
   }
-  .divider {
-    width: 40px; height: 1px;
-    background: var(--gold);
-    margin-bottom: 1.5rem;
-  }
+  .divider { width: 40px; height: 1px; background: var(--gold); margin-bottom: 1.5rem; }
 
-  /* ── ABOUT ── */
+  /* ABOUT */
   #about { background: var(--white); }
   .about-grid {
     display: grid;
@@ -259,13 +245,8 @@
     margin-bottom: 1.25rem;
     font-weight: 300;
   }
-  .about-text p strong {
-    color: var(--navy);
-    font-weight: 500;
-  }
-  .about-aside {
-    display: flex; flex-direction: column; gap: 1.5rem;
-  }
+  .about-text p strong { color: var(--navy); font-weight: 500; }
+  .about-aside { display: flex; flex-direction: column; gap: 1.5rem; }
   .aside-card {
     border: 1px solid var(--border);
     border-left: 3px solid var(--gold);
@@ -279,14 +260,9 @@
     color: var(--muted);
     margin-bottom: 0.5rem;
   }
-  .aside-card-value {
-    font-size: 0.95rem;
-    color: var(--navy);
-    font-weight: 500;
-    line-height: 1.5;
-  }
+  .aside-card-value { font-size: 0.95rem; color: var(--navy); font-weight: 500; line-height: 1.5; }
 
-  /* ── EXPERIENCE ── */
+  /* EXPERIENCE */
   #experience { background: var(--navy); }
   #experience .section-title { color: var(--white); }
   #experience .section-label { color: var(--gold-light); }
@@ -310,21 +286,14 @@
     border-radius: 50%;
     background: var(--gold);
   }
-  .timeline-meta {
-    display: flex; align-items: center; gap: 1rem;
-    margin-bottom: 0.5rem;
-  }
+  .timeline-meta { display: flex; align-items: center; gap: 1rem; margin-bottom: 0.5rem; }
   .timeline-date {
     font-size: 0.72rem;
     letter-spacing: 0.12em;
     text-transform: uppercase;
     color: var(--gold);
   }
-  .timeline-org {
-    font-size: 0.78rem;
-    color: rgba(250,250,248,0.45);
-    letter-spacing: 0.04em;
-  }
+  .timeline-org { font-size: 0.78rem; color: rgba(250,250,248,0.45); letter-spacing: 0.04em; }
   .timeline-title {
     font-family: 'Cormorant Garamond', serif;
     font-size: 1.4rem;
@@ -336,14 +305,11 @@
   .timeline-desc {
     font-size: 0.9rem;
     color: rgba(250,250,248,0.65);
-    line-height: 1.8;
-    max-width: 580px;
+    line-height: 1.85;
+    max-width: 600px;
     font-weight: 300;
   }
-  .timeline-tags {
-    display: flex; flex-wrap: wrap; gap: 0.4rem;
-    margin-top: 1rem;
-  }
+  .timeline-tags { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-top: 1rem; }
   .timeline-tag {
     font-size: 0.67rem;
     letter-spacing: 0.1em;
@@ -354,7 +320,7 @@
     border-radius: 2px;
   }
 
-  /* ── PROJECTS ── */
+  /* PROJECTS */
   #projects { background: var(--off-white); }
   .projects-grid {
     display: grid;
@@ -366,7 +332,6 @@
     border: 1px solid var(--border);
     border-radius: 3px;
     padding: 2rem;
-    transition: transform 0.25s, box-shadow 0.25s;
     display: flex; flex-direction: column;
     gap: 1rem;
     opacity: 0;
@@ -375,29 +340,10 @@
   }
   .project-card.visible { opacity: 1; transform: translateY(0); }
   .project-card:hover { transform: translateY(-4px); box-shadow: 0 12px 32px rgba(13,27,62,0.08); }
-  .project-num {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 0.85rem;
-    color: var(--gold);
-    font-style: italic;
-  }
-  .project-name {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 1.45rem;
-    font-weight: 600;
-    color: var(--navy);
-    line-height: 1.2;
-  }
-  .project-desc {
-    font-size: 0.88rem;
-    color: #5A5650;
-    line-height: 1.75;
-    font-weight: 300;
-    flex: 1;
-  }
-  .project-tech {
-    display: flex; flex-wrap: wrap; gap: 0.35rem;
-  }
+  .project-num { font-family: 'Cormorant Garamond', serif; font-size: 0.85rem; color: var(--gold); font-style: italic; }
+  .project-name { font-family: 'Cormorant Garamond', serif; font-size: 1.45rem; font-weight: 600; color: var(--navy); line-height: 1.2; }
+  .project-desc { font-size: 0.88rem; color: #5A5650; line-height: 1.75; font-weight: 300; flex: 1; }
+  .project-tech { display: flex; flex-wrap: wrap; gap: 0.35rem; }
   .tech-pill {
     font-size: 0.67rem;
     letter-spacing: 0.08em;
@@ -416,13 +362,9 @@
     border-top: 1px solid var(--border);
   }
 
-  /* ── SKILLS ── */
+  /* SKILLS */
   #skills { background: var(--white); }
-  .skills-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 2rem;
-  }
+  .skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 2rem; }
   .skill-group-title {
     font-size: 0.72rem;
     letter-spacing: 0.16em;
@@ -442,28 +384,15 @@
   }
   .skill-list li:last-child { border-bottom: none; }
 
-  /* ── WHATS NEXT ── */
+  /* WHAT'S NEXT */
   #next {
     background: var(--gold-pale);
     border-top: 1px solid rgba(201,151,58,0.2);
     border-bottom: 1px solid rgba(201,151,58,0.2);
   }
-  .next-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 4rem;
-    align-items: center;
-  }
-  .next-text p {
-    font-size: 1rem;
-    color: #3A3525;
-    line-height: 1.85;
-    margin-bottom: 1rem;
-    font-weight: 300;
-  }
-  .next-cards {
-    display: flex; flex-direction: column; gap: 1rem;
-  }
+  .next-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
+  .next-text p { font-size: 1rem; color: #3A3525; line-height: 1.85; margin-bottom: 1rem; font-weight: 300; }
+  .next-cards { display: flex; flex-direction: column; gap: 1rem; }
   .next-card {
     background: var(--white);
     border: 1px solid rgba(201,151,58,0.25);
@@ -471,41 +400,16 @@
     padding: 1.25rem 1.5rem;
     border-radius: 2px;
   }
-  .next-card-label {
-    font-size: 0.68rem;
-    letter-spacing: 0.14em;
-    text-transform: uppercase;
-    color: var(--muted);
-    margin-bottom: 0.4rem;
-  }
-  .next-card-value {
-    font-size: 0.95rem;
-    color: var(--navy);
-    font-weight: 500;
-  }
-  .next-card-sub {
-    font-size: 0.82rem;
-    color: var(--muted);
-    margin-top: 0.25rem;
-  }
+  .next-card-label { font-size: 0.68rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); margin-bottom: 0.4rem; }
+  .next-card-value { font-size: 0.95rem; color: var(--navy); font-weight: 500; }
+  .next-card-sub { font-size: 0.82rem; color: var(--muted); margin-top: 0.25rem; }
 
-  /* ── CONTACT ── */
+  /* CONTACT */
   #contact { background: var(--navy); }
   #contact .section-title { color: var(--white); }
   #contact .section-label { color: var(--gold-light); }
-  .contact-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 4rem;
-    align-items: start;
-  }
-  .contact-text {
-    font-size: 1rem;
-    color: rgba(250,250,248,0.65);
-    line-height: 1.85;
-    font-weight: 300;
-    margin-bottom: 1.5rem;
-  }
+  .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: start; }
+  .contact-text { font-size: 1rem; color: rgba(250,250,248,0.65); line-height: 1.85; font-weight: 300; margin-bottom: 1.5rem; }
   .contact-links { display: flex; flex-direction: column; gap: 0.75rem; }
   .contact-link {
     display: flex; align-items: center; gap: 0.75rem;
@@ -523,16 +427,10 @@
     flex-shrink: 0;
     font-size: 0.85rem;
   }
-
   .contact-form { display: flex; flex-direction: column; gap: 1rem; }
   .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
   .form-group { display: flex; flex-direction: column; gap: 0.4rem; }
-  .form-group label {
-    font-size: 0.72rem;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    color: rgba(250,250,248,0.5);
-  }
+  .form-group label { font-size: 0.72rem; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(250,250,248,0.5); }
   .form-group input, .form-group textarea {
     background: rgba(255,255,255,0.06);
     border: 1px solid rgba(201,151,58,0.2);
@@ -564,33 +462,19 @@
   }
   .form-submit:hover { background: var(--gold-light); }
 
-  /* ── FOOTER ── */
+  /* FOOTER */
   footer {
     background: #080F21;
     padding: 2rem 2.5rem;
     display: flex; align-items: center; justify-content: space-between;
   }
-  .footer-name {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 1rem;
-    color: rgba(250,250,248,0.4);
-  }
-  .footer-note {
-    font-size: 0.72rem;
-    color: rgba(250,250,248,0.25);
-    letter-spacing: 0.06em;
-  }
+  .footer-name { font-family: 'Cormorant Garamond', serif; font-size: 1rem; color: rgba(250,250,248,0.4); }
+  .footer-note { font-size: 0.72rem; color: rgba(250,250,248,0.25); letter-spacing: 0.06em; }
 
-  /* ── SCROLL ANIMATIONS ── */
-  @keyframes fadeUp {
-    from { opacity: 0; transform: translateY(24px); }
-    to { opacity: 1; transform: translateY(0); }
-  }
-
-  /* ── RESPONSIVE ── */
+  /* RESPONSIVE */
   @media (max-width: 768px) {
     #hero { grid-template-columns: 1fr; }
-    .hero-right { min-height: 320px; display: none; }
+    .hero-right { display: none; }
     .hero-left { padding: 4rem 2rem; }
     .about-grid, .next-grid, .contact-grid { grid-template-columns: 1fr; gap: 2rem; }
     .form-row { grid-template-columns: 1fr; }
@@ -621,11 +505,11 @@
   <div class="hero-left">
     <p class="hero-eyebrow">Product · Strategy · Consulting</p>
     <h1 class="hero-name">Delina<br><em>Kahsay</em></h1>
-    <p class="hero-tagline">Building at the intersection of AI, product thinking, and data — for people who actually use the things I make.</p>
+    <p class="hero-tagline">Building at the intersection of AI, product thinking, and data, for people who actually use the things I make.</p>
     <div class="hero-badges">
       <span class="badge">GWU Information Systems</span>
       <span class="badge">3.97 GPA</span>
-      <span class="badge">Deloitte · News Corp · PwC</span>
+      <span class="badge">News Corp · PwC · Energy Innovation Capital</span>
     </div>
     <div class="hero-actions">
       <a href="#projects" class="btn-primary">View My Work</a>
@@ -634,7 +518,7 @@
   </div>
   <div class="hero-right">
     <div class="hero-photo-placeholder" id="heroPhoto">
-      <!-- Replace src with your headshot path after upload -->
+      <!-- Replace this span with: <img src="headshot.jpg" alt="Delina Kahsay"> -->
       <img src="headshot.jpg" alt="Delina Kahsay">
     </div>
     <div class="hero-stat-row">
@@ -662,9 +546,9 @@
     <div class="about-grid">
       <div class="about-text">
         <h2 class="section-title">Products built for<br><em style="font-family:'Cormorant Garamond',serif;font-style:italic;color:var(--gold);">real people</em></h2>
-        <p>Originally from Ethiopia, I came to the United States and built a record I'm proud of — fast. I'm a junior at The George Washington University studying Information Systems, graduating December 2026, and I care deeply about making technology that is <strong>accessible, human, and useful</strong>.</p>
-        <p>I've worked with News Corp diagnosing why Gen-Z users were disengaging from AI features, with PwC helping a nonprofit rethink how it raises funding, and independently built an AI-powered shopping product from scratch. I don't wait to be handed the right conditions — I build the conditions.</p>
-        <p>I'm fluent in English, native in Tigrinya, and conversational in Amharic. Outside work, I'm drawn to edtech, fintech, consumer products, and anything where good product thinking can make something meaningfully better for the people using it.</p>
+        <p>I'm a junior at The George Washington University studying Information Systems, graduating December 2026 with a 3.97 GPA and Dean's List recognition. I care about making technology that is <strong>accessible, human, and useful</strong>, and I've built a track record around that belief quickly.</p>
+        <p>I've worked with News Corp diagnosing why Gen-Z users were disengaging from AI features, with PwC helping a nonprofit rethink how it raises funding, and independently built an AI-powered shopping product from scratch. I don't wait to be handed the right conditions. I build them.</p>
+        <p>Outside of work, I'm drawn to edtech, fintech, consumer products, and anything where strong product thinking can make something genuinely better for the people using it. I speak English and Amharic.</p>
       </div>
       <div class="about-aside">
         <div class="aside-card">
@@ -672,12 +556,12 @@
           <div class="aside-card-value">The George Washington University<br>B.S. Information Systems</div>
         </div>
         <div class="aside-card">
-          <div class="aside-card-label">Scholarships</div>
-          <div class="aside-card-value">Bank of America Scholar<br>Elizabeth Brinkerhoff Scholar<br>Chen Family Scholar</div>
+          <div class="aside-card-label">Honors and Awards</div>
+          <div class="aside-card-value">Dean's List<br>Outstanding Academic Achievement Award<br>Bank of America Scholar<br>Elizabeth Brinkerhoff Scholar<br>Chen Family Scholar</div>
         </div>
         <div class="aside-card">
           <div class="aside-card-label">Languages</div>
-          <div class="aside-card-value">English · Tigrinya · Amharic</div>
+          <div class="aside-card-value">English · Amharic</div>
         </div>
         <div class="aside-card">
           <div class="aside-card-label">Based In</div>
@@ -702,8 +586,8 @@
           <span class="timeline-date">Aug 2025 – Present</span>
           <span class="timeline-org">The George Washington University</span>
         </div>
-        <div class="timeline-title">Teaching Assistant — Business Systems Development</div>
-        <p class="timeline-desc">Facilitate weekly labs on systems analysis, data flow modeling, and Python for 45+ students. Establish and maintain documentation standards across 90+ weekly deliverables, providing targeted feedback that improves analytical clarity semester over semester.</p>
+        <div class="timeline-title">Teaching Assistant, Business Systems Development</div>
+        <p class="timeline-desc">Every week I work directly with 45+ students through one of the more technically demanding courses in the Information Systems program. I facilitate labs on systems analysis, data flow modeling, and Python, and I evaluate over 90 student deliverables per week, giving each one detailed written feedback. The work that matters most to me here is the one-on-one time during office hours, helping students debug SQL, sharpen their requirements documentation, and actually understand why the concepts connect the way they do.</p>
         <div class="timeline-tags">
           <span class="timeline-tag">Systems Analysis</span><span class="timeline-tag">ERD Design</span><span class="timeline-tag">Agile</span><span class="timeline-tag">SQL</span><span class="timeline-tag">Documentation</span>
         </div>
@@ -715,8 +599,8 @@
           <span class="timeline-date">May – Aug 2025</span>
           <span class="timeline-org">News Corp · Remote</span>
         </div>
-        <div class="timeline-title">AI Product Strategy Extern &amp; Cohort Leader</div>
-        <p class="timeline-desc">Diagnosed why Gen-Z users were disengaging from AI personalization across News Corp apps. Designed and administered a mixed-methods survey across 50 externs, surfacing three core barriers: data privacy concerns, perceived information bubbles, and lack of content transparency. Developed three product recommendations for The Times targeting those KPIs, proposed a phased rollout and A/B testing strategy, and was selected to present directly to the VP of Engineering — whose team accepted the work as the most comprehensive submitted.</p>
+        <div class="timeline-title">AI Product Strategy Extern and Cohort Leader</div>
+        <p class="timeline-desc">I was brought on to help figure out why Gen-Z users were disengaging from AI personalization features across News Corp's news apps. As Cohort Leader, I designed and ran a mixed-methods survey coordinated across 50 externs, combining responses to build a statistically meaningful picture of the problem. The analysis surfaced three core barriers: data privacy concerns, perceived information bubbles, and a lack of content transparency. I chose The Times as my focus app, ran a full audit of its current AI features, and developed three specific product recommendations with a phased rollout and A/B testing framework for the engineering team. My submission was selected as the most comprehensive in the cohort, and I was asked to present directly to the VP of Engineering and a senior Product Manager. The team accepted the recommendations and indicated they would move forward with them.</p>
         <div class="timeline-tags">
           <span class="timeline-tag">User Research</span><span class="timeline-tag">Product Strategy</span><span class="timeline-tag">A/B Testing</span><span class="timeline-tag">KPI Analysis</span><span class="timeline-tag">Figma</span>
         </div>
@@ -729,7 +613,7 @@
           <span class="timeline-org">PwC · Remote</span>
         </div>
         <div class="timeline-title">Non-Profit Consulting Extern</div>
-        <p class="timeline-desc">Researched and evaluated 150+ institutional funding sources for a nonprofit facing a declining individual donor base. Built a structured Excel tracker scoring each source on fit, likelihood, and complexity. Narrowed the list to three high-potential donors representing up to $1M in funding and developed detailed application roadmaps for each. Presented to PwC consultants and the client directly — they moved forward with all three.</p>
+        <p class="timeline-desc">The client was a nonprofit in a tough spot: their donor base was aging, donations were declining, and they were too reliant on individual giving. I started by researching comparable organizations to understand where sustainable long-term funding was actually coming from, then shifted the strategy toward institutional donors. I evaluated over 150 potential funding sources and organized everything in a structured Excel tracker scoring each one on organizational fit, likelihood, application complexity, and timeline. I narrowed the field to three high-potential institutional donors representing up to $1M in funding, built detailed application roadmaps for each, and presented the full strategy to PwC consultants and the client directly. They found it compelling and moved forward with applying to all three.</p>
         <div class="timeline-tags">
           <span class="timeline-tag">Strategic Research</span><span class="timeline-tag">Excel</span><span class="timeline-tag">Client Presentation</span><span class="timeline-tag">Consulting</span>
         </div>
@@ -742,7 +626,7 @@
           <span class="timeline-org">Energy Innovation Capital · Remote</span>
         </div>
         <div class="timeline-title">Venture Capital Analyst Extern</div>
-        <p class="timeline-desc">Conducted due diligence on early-stage technology startups being evaluated for investment, assessing operational viability, market positioning, and product strategy. Evaluated AI and IoT-based solutions against industry benchmarks and produced structured analysis contributing to portfolio recommendations.</p>
+        <p class="timeline-desc">I conducted due diligence on early-stage technology startups being evaluated for investment, looking at operational viability, market positioning, and product strategy. I assessed AI and IoT solutions against industry benchmarks and produced structured analysis that fed into the firm's portfolio recommendations. This was my first real exposure to how investors evaluate technology products and teams, and it sharpened how I think about market fit and operational risk.</p>
         <div class="timeline-tags">
           <span class="timeline-tag">Due Diligence</span><span class="timeline-tag">Market Analysis</span><span class="timeline-tag">Investment Research</span>
         </div>
@@ -752,7 +636,7 @@
   </div>
 </section>
 
-<!-- LEADERSHIP (part of experience visually) -->
+<!-- LEADERSHIP -->
 <section id="leadership" style="background:#0A1530; padding: 1rem 0 4rem;">
   <div class="container">
     <p class="section-label" style="color:var(--gold-light)">Leadership</p>
@@ -764,8 +648,8 @@
           <span class="timeline-date">Jan 2025 – Present</span>
           <span class="timeline-org">GWU SITA</span>
         </div>
-        <div class="timeline-title">Co-Founder &amp; President — Student Information Technology Association</div>
-        <p class="timeline-desc">Built GWU's first Information Systems student organization from scratch — governance, membership, partnerships, and programming. Scaled to 100+ members in one semester. Established partnerships with Deloitte, Amazon, Google, and AWS for technical workshops and mentorship. Organized a campus AWS sustainability hackathon from intake through execution.</p>
+        <div class="timeline-title">Co-Founder and President, Student Information Technology Association</div>
+        <p class="timeline-desc">When I started at GWU there was no student organization for Information Systems majors. No community, no industry connections, no pipeline. I built one from scratch. I set up the governance structure, recruited founding members, built partnerships with Amazon, Google, and AWS, and designed the event programming from the ground up. Within one semester SITA had grown to 100+ members. I also organized a campus AWS sustainability hackathon as President, coordinating student teams, corporate judges, and university logistics from start to finish. SITA has become a real resource for ISTM students who previously had no dedicated professional community.</p>
         <div class="timeline-tags">
           <span class="timeline-tag">Org Founding</span><span class="timeline-tag">Partnership Dev</span><span class="timeline-tag">Event Management</span>
         </div>
@@ -776,8 +660,8 @@
           <span class="timeline-date">Jan 2026 – Present</span>
           <span class="timeline-org">ColorStack · GWU Chapter</span>
         </div>
-        <div class="timeline-title">Founder &amp; President — ColorStack Chapter</div>
-        <p class="timeline-desc">Founded GWU's ColorStack chapter to build a dedicated pipeline connecting Black and Latinx computing students to technical recruiting, mentorship, and professional development at top firms. Established chapter infrastructure and programming from the ground up.</p>
+        <div class="timeline-title">Founder and President, ColorStack Chapter</div>
+        <p class="timeline-desc">I founded GWU's ColorStack chapter to create a dedicated pipeline connecting Black and Latinx computing students to technical recruiting, mentorship, and professional development. ColorStack is a national organization focused on increasing the number of Black and Latinx students who graduate with computing degrees and build careers in tech. I established the chapter from the ground up, building the infrastructure and programming needed to connect members with recruiters and professionals at top firms.</p>
         <div class="timeline-tags">
           <span class="timeline-tag">DEI</span><span class="timeline-tag">Community Building</span><span class="timeline-tag">Recruiting Pipeline</span>
         </div>
@@ -797,41 +681,41 @@
       <div class="project-card">
         <div class="project-num">01</div>
         <div class="project-name">Olio</div>
-        <p class="project-desc">An AI-powered shopping assistant that lets users describe what they're looking for in natural language — the way they'd describe it to a friend. Olio searches the web in real time, surfaces matching products, and organizes them in a clean interface with a cart and saved items feature. Built and iterated independently from concept to working product.</p>
+        <p class="project-desc">An AI-powered shopping assistant that lets users describe what they're looking for in natural language, the way they'd describe it to a friend. Olio searches the web in real time, surfaces matching products, and organizes them in a clean interface with a cart and saved items feature. Built and iterated independently from concept to working product, with ongoing user testing shaping each iteration.</p>
         <div class="project-tech">
           <span class="tech-pill">Python</span><span class="tech-pill">GPT API</span><span class="tech-pill">SERP API</span><span class="tech-pill">Prompt Engineering</span><span class="tech-pill">Cursor</span>
         </div>
-        <div class="project-status">🟡 In development — active user testing</div>
+        <div class="project-status">In development · active user testing</div>
       </div>
 
       <div class="project-card">
         <div class="project-num">02</div>
         <div class="project-name">StudySync AI</div>
-        <p class="project-desc">An AI-powered learning platform designed to integrate directly with Blackboard. Built through a full SDLC process — requirements, design, prototype. StudySync personalizes study workflows based on individual student performance data, delivers adaptive content, and includes an anonymous communication channel between students and faculty that keeps feedback constructive without revealing identity. Designed with full FERPA compliance throughout.</p>
+        <p class="project-desc">An AI-powered learning platform designed to plug directly into Blackboard. StudySync takes in student performance data, including grades, quiz results, and what material was missed, and generates a personalized study guide for that student. It also includes an anonymous communication channel between students and faculty: professors can flag areas for improvement and that feedback surfaces inside the student's study guide without being directly attributed. Built with full FERPA compliance as a design constraint throughout, not an afterthought. Taken through requirements, design, and a working prototype via a full SDLC process.</p>
         <div class="project-tech">
-          <span class="tech-pill">No-Code Development</span><span class="tech-pill">AI Integration</span><span class="tech-pill">FERPA</span><span class="tech-pill">SDLC</span><span class="tech-pill">Blackboard</span>
+          <span class="tech-pill">No-Code Dev</span><span class="tech-pill">AI Integration</span><span class="tech-pill">FERPA</span><span class="tech-pill">SDLC</span><span class="tech-pill">Blackboard</span>
         </div>
-        <div class="project-status">✅ Prototype complete — designed through full SDLC</div>
+        <div class="project-status">Prototype complete · full SDLC</div>
       </div>
 
       <div class="project-card">
         <div class="project-num">03</div>
         <div class="project-name">Ride-Share Pricing Analysis</div>
-        <p class="project-desc">Merged two large Kaggle datasets in Databricks using Python and SQL to analyze how Uber and Lyft structure pricing. Applied linear regression to identify surge pricing as the primary driver of fare variance. Produced a data-backed growth recommendation for Lyft's pricing and customer trust strategy with clear visualizations for stakeholders.</p>
+        <p class="project-desc">Merged two large Kaggle datasets in Databricks using Python and SQL to analyze how Uber and Lyft actually structure their pricing. We looked at what variables affect price the most and how both platforms respond to high-demand periods. Linear regression identified surge pricing as the primary driver of fare variance between the two. The end product was a data-backed recommendation for what Lyft would need to change in its pricing and customer trust strategy to close the gap with Uber.</p>
         <div class="project-tech">
           <span class="tech-pill">Python</span><span class="tech-pill">SQL</span><span class="tech-pill">Databricks</span><span class="tech-pill">Google Colab</span><span class="tech-pill">Linear Regression</span>
         </div>
-        <div class="project-status">✅ Completed — IoT Applications &amp; Management course</div>
+        <div class="project-status">Completed · IoT Applications and Management</div>
       </div>
 
       <div class="project-card">
         <div class="project-num">04</div>
-        <div class="project-name">Student Collect — Enterprise DB</div>
-        <p class="project-desc">Designed a full enterprise database system from scratch using MySQL. Starting from stakeholder requirements, produced ERDs, normalization through third normal form, schema scripts, SQL queries, a complete data dictionary, and business rules governing data integrity — simulating the kind of work done in real enterprise environments.</p>
+        <div class="project-name">Student Collect</div>
+        <p class="project-desc">Designed a full enterprise database system from scratch using MySQL. Starting from raw stakeholder requirements, I produced ERDs, normalization through third normal form, schema creation scripts, SQL queries, a complete data dictionary, and business rules governing data integrity. The project simulated real enterprise database design work and required translating ambiguous stakeholder needs into precise, structured technical specifications.</p>
         <div class="project-tech">
           <span class="tech-pill">MySQL</span><span class="tech-pill">ERD Design</span><span class="tech-pill">Database Normalization</span><span class="tech-pill">SQL</span>
         </div>
-        <div class="project-status">✅ Completed — Database Management course</div>
+        <div class="project-status">Completed · Database Management</div>
       </div>
 
     </div>
@@ -848,15 +732,15 @@
       <div>
         <div class="skill-group-title">Programming</div>
         <ul class="skill-list">
-          <li>Python — proficient</li>
-          <li>SQL — proficient</li>
+          <li>Python (proficient)</li>
+          <li>SQL (proficient)</li>
           <li>JavaScript</li>
           <li>HTML / CSS</li>
-          <li>R — familiar</li>
+          <li>R (familiar)</li>
         </ul>
       </div>
       <div>
-        <div class="skill-group-title">Tools &amp; Platforms</div>
+        <div class="skill-group-title">Tools and Platforms</div>
         <ul class="skill-list">
           <li>Excel (PivotTables, Power Query, VBA)</li>
           <li>Tableau / Power BI</li>
@@ -866,11 +750,11 @@
         </ul>
       </div>
       <div>
-        <div class="skill-group-title">Product &amp; AI</div>
+        <div class="skill-group-title">Product and AI</div>
         <ul class="skill-list">
           <li>User research (surveys, qual + quant)</li>
-          <li>Product strategy &amp; recommendations</li>
-          <li>KPI definition &amp; A/B testing</li>
+          <li>Product strategy and recommendations</li>
+          <li>KPI definition and A/B testing</li>
           <li>LLM integration (GPT, SERP APIs)</li>
           <li>Prompt engineering</li>
           <li>Agile / Scrum</li>
@@ -880,10 +764,10 @@
         <div class="skill-group-title">Analytical</div>
         <ul class="skill-list">
           <li>Requirements gathering</li>
-          <li>Process mapping &amp; SOP development</li>
+          <li>Process mapping and SOP development</li>
           <li>Data storytelling</li>
           <li>Customer journey mapping</li>
-          <li>ERD &amp; systems design</li>
+          <li>ERD and systems design</li>
         </ul>
       </div>
     </div>
@@ -902,9 +786,9 @@
     <div class="next-grid">
       <div class="next-text">
         <h2 class="section-title">What's next<br>for me</h2>
-        <p>I graduate in December 2026 and I'm looking for a full-time role in product management, strategy, or consulting — ideally at a firm where I can work on problems that are genuinely hard and worth solving.</p>
-        <p>Alongside that, I've been accepted into GWU's 4+1 MSIST program, which lets me complete my master's in Information Systems Technology alongside my bachelor's. I'm interested in roles at the intersection of AI, data, and product — in tech, consulting, fintech, or edtech.</p>
-        <p>If you're building something that fits that description, I'd like to hear from you.</p>
+        <p>I graduate in December 2026 and I'm looking for a full-time role in product management, strategy, or consulting at a firm where I can work on problems that are genuinely hard and worth solving.</p>
+        <p>I've also been accepted into GWU's 4+1 MSIST program, which lets me complete my master's in Information Systems Technology alongside my bachelor's. I'm most drawn to roles at the intersection of AI, data, and product in tech, consulting, fintech, or edtech.</p>
+        <p>If you're building something that fits, I'd like to hear from you.</p>
         <a href="#contact" class="btn-primary" style="margin-top:0.5rem; display:inline-block;">Let's talk</a>
       </div>
       <div class="next-cards">
@@ -916,17 +800,12 @@
         <div class="next-card">
           <div class="next-card-label">Graduate Program</div>
           <div class="next-card-value">MS Information Systems Technology</div>
-          <div class="next-card-sub">GWU 4+1 Program — accepted</div>
+          <div class="next-card-sub">GWU 4+1 Program · accepted</div>
         </div>
         <div class="next-card">
           <div class="next-card-label">Target Roles</div>
-          <div class="next-card-value">Product Manager · Strategy &amp; Ops · Consulting Analyst</div>
-          <div class="next-card-sub">Open to: tech, consulting, fintech, edtech, government</div>
-        </div>
-        <div class="next-card">
-          <div class="next-card-label">Offer In Hand</div>
-          <div class="next-card-value">Deloitte — Government &amp; Cyber Strategy</div>
-          <div class="next-card-sub">Internship · Evaluating full-time opportunities</div>
+          <div class="next-card-value">Product Manager · Strategy and Ops · Consulting Analyst</div>
+          <div class="next-card-sub">Open to tech, consulting, fintech, edtech, government</div>
         </div>
       </div>
     </div>
@@ -947,9 +826,9 @@
             <span class="contact-link-icon">✉</span>
             kahdelina@gmail.com
           </a>
-          <a href="https://linkedin.com/in/delinakahsay" target="_blank" class="contact-link">
+          <a href="https://www.linkedin.com/in/delina-kahsay/" target="_blank" class="contact-link">
             <span class="contact-link-icon">in</span>
-            linkedin.com/in/delinakahsay
+            linkedin.com/in/delina-kahsay
           </a>
           <a href="https://github.com/delinakahsay" target="_blank" class="contact-link">
             <span class="contact-link-icon">gh</span>
@@ -957,24 +836,25 @@
           </a>
         </div>
       </div>
-      <form class="contact-form" onsubmit="handleSubmit(event)">
+      <!-- Replace YOUR_FORMSPREE_CODE with your actual code from formspree.io -->
+      <form class="contact-form" action="https://formspree.io/f/YOUR_FORMSPREE_CODE" method="POST">
         <div class="form-row">
           <div class="form-group">
             <label>Name</label>
-            <input type="text" placeholder="Your name" required>
+            <input type="text" name="name" placeholder="Your name" required>
           </div>
           <div class="form-group">
             <label>Email</label>
-            <input type="email" placeholder="your@email.com" required>
+            <input type="email" name="email" placeholder="your@email.com" required>
           </div>
         </div>
         <div class="form-group">
           <label>Subject</label>
-          <input type="text" placeholder="Opportunity, collaboration, coffee...">
+          <input type="text" name="subject" placeholder="Opportunity, collaboration, coffee...">
         </div>
         <div class="form-group">
           <label>Message</label>
-          <textarea rows="5" placeholder="Tell me what's on your mind." required></textarea>
+          <textarea name="message" rows="5" placeholder="Tell me what's on your mind." required></textarea>
         </div>
         <button type="submit" class="form-submit">Send Message</button>
       </form>
@@ -985,11 +865,10 @@
 <!-- FOOTER -->
 <footer>
   <div class="footer-name">Delina Kahsay</div>
-  <div class="footer-note">© 2025 · Washington, DC · delinakahsay.com</div>
+  <div class="footer-note">2026 · Washington, DC</div>
 </footer>
 
 <script>
-  // Scroll reveal
   const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry, i) => {
       if (entry.isIntersecting) {
@@ -998,19 +877,9 @@
       }
     });
   }, { threshold: 0.1 });
-
   document.querySelectorAll('.timeline-item, .project-card').forEach(el => observer.observe(el));
-
-  // Simple form handler
-  function handleSubmit(e) {
-    e.preventDefault();
-    const btn = e.target.querySelector('.form-submit');
-    btn.textContent = 'Message sent ✓';
-    btn.style.background = '#2A4080';
-    btn.disabled = true;
-    // Wire up to Formspree or EmailJS for real sending
-  }
 </script>
 
 </body>
 </html>
+
