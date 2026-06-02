@@ -183,13 +183,15 @@ Index · HTML
     border-radius: 2px;
     display: flex; align-items: center; justify-content: center;
     overflow: hidden;
+    bottom: 11rem;
   }
   .hero-photo-placeholder img {
-    width: 100%; height: 100%;
-    object-fit: cover; object-position: center 15%;
-    display: block;
-    border-radius: 2px;
-  }
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 10%;
+  display: block;
+}
   .hero-photo-placeholder span {
     font-size: 0.75rem;
     color: var(--muted);
@@ -491,13 +493,7 @@ Index · HTML
  
 <!-- NAV -->
 <nav>
-  <a href="#" class="nav-name" style="display:flex;align-items:center;gap:0.6rem;">
-    <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg" style="flex-shrink:0;">
-      <rect width="26" height="26" rx="2" fill="#0D1B3E"/>
-      <text x="13" y="18" font-family="Georgia,serif" font-size="14" font-style="italic" font-weight="400" fill="#C9973A" text-anchor="middle">dk</text>
-    </svg>
-    Delina Kahsay
-  </a>
+  <a href="#" class="nav-name">Delina <em style="font-family:'Cormorant Garamond',serif; font-style:italic; color:var(--gold); font-weight:600;">Kahsay</em></a>
   <ul class="nav-links">
     <li><a href="#about">About</a></li>
     <li><a href="#experience">Experience</a></li>
@@ -530,20 +526,19 @@ Index · HTML
       <span>Photo coming soon</span>
     </div>
     <div class="hero-stat-row">
-      <div>
-        <div class="hero-stat-num">3.97</div>
-        <div class="hero-stat-label">GPA · Dean's List</div>
-      </div>
-      <div>
-        <div class="hero-stat-num" style="font-size:1.1rem; padding-top:0.3rem;">Outstanding</div>
-        <div class="hero-stat-label">Academic Achievement</div>
-      </div>
-      <div>
-        <div class="hero-stat-num">3</div>
-        <div class="hero-stat-label">Scholarships</div>
-      </div>
-    </div>
+  <div>
+    <div class="hero-stat-num">3.97</div>
+    <div class="hero-stat-label">GPA · Dean's List</div>
   </div>
+  <div>
+    <div class="hero-stat-num">3</div>
+    <div class="hero-stat-label">Scholarships</div>
+  </div>
+  <div>
+    <div class="hero-stat-num" style="font-size:1rem; line-height:1.3;">Outstanding<br>Academic Award</div>
+    <div class="hero-stat-label">&nbsp;</div>
+  </div>
+</div>
 </section>
  
 <!-- ABOUT -->
