@@ -529,7 +529,7 @@
     </div>
     <div class="hero-stat-row">
   <div>
-    <div class="hero-stat-num">3+</div>
+    <div class="hero-stat-num">7</div>
     <div class="hero-stat-label">Projects</div>
   </div>
   <div>
@@ -686,18 +686,44 @@
       <div class="project-card">
         <div class="project-num">01</div>
         <div class="project-name">Olio</div>
-        <p class="project-desc">An AI-powered shopping assistant that lets users describe what they're looking for in natural language, the way they'd describe it to a friend. Olio searches the web in real time, surfaces matching products, and organizes them in a clean interface with a cart and saved items feature. Built and iterated independently from concept to working product, with ongoing user testing shaping each iteration.</p>
+        <p class="project-desc">An AI-powered shopping assistant that lets users describe what they're looking for in natural language, the way they'd describe it to a friend. Olio searches the web in real time through SerpAPI, surfaces matching products with an AI-written shopping tip, and organizes everything in a clean interface with accounts, saved items, and a cart that persists across sessions. Built and iterated independently from concept to working product; the frontend is a component-based React app backed by serverless functions.</p>
         <div class="project-tech">
-          <span class="tech-pill">Python</span><span class="tech-pill">GPT API</span><span class="tech-pill">SERP API</span><span class="tech-pill">Prompt Engineering</span><span class="tech-pill">Cursor</span>
+          <span class="tech-pill">React</span><span class="tech-pill">JavaScript</span><span class="tech-pill">GPT API</span><span class="tech-pill">SERP API</span><span class="tech-pill">Supabase</span>
         </div>
-        <div style="display:flex;gap:0.5rem;align-items:center;margin-top:0.75rem;">
+        <div style="display:flex;gap:0.5rem;align-items:center;margin-top:0.75rem;flex-wrap:wrap;">
           <a href="https://olio-com.vercel.app/" target="_blank" style="background:var(--gold);color:var(--navy);text-decoration:none;font-size:0.72rem;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;padding:0.4rem 1rem;border-radius:2px;">Try Olio</a>
-          <div class="project-status" style="border:none;padding:0;">In development</div>
+          <a href="https://github.com/delinakahsay/olio.com" target="_blank" style="border:1px solid var(--gold);color:var(--gold);text-decoration:none;font-size:0.72rem;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;padding:0.4rem 1rem;border-radius:2px;">View Code</a>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-num">02</div>
+        <div class="project-name">ForgeLink</div>
+        <p class="project-desc">An AI sourcing assistant for B2B engineering buyers. Businesses sign up with a company profile, describe what they need in plain language, and a Claude-powered agent searches a multi-region supplier catalog, compares real landed cost and delivery time instead of sticker price, and files requests-for-quote on their behalf. The agent runs a tool-use loop with three tools it can call, is instructed to never invent listings, and every conversation persists per user. Full-stack build: authentication, SQLite persistence, and an RFQ tracker.</p>
+        <div class="project-tech">
+          <span class="tech-pill">JavaScript</span><span class="tech-pill">Node.js</span><span class="tech-pill">Claude API</span><span class="tech-pill">Agentic Tool Use</span><span class="tech-pill">SQLite</span>
+        </div>
+        <div style="display:flex;gap:0.5rem;align-items:center;margin-top:0.75rem;flex-wrap:wrap;">
+          <a href="https://github.com/delinakahsay/forgelink" target="_blank" style="border:1px solid var(--gold);color:var(--gold);text-decoration:none;font-size:0.72rem;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;padding:0.4rem 1rem;border-radius:2px;">View Code</a>
+          <div class="project-status" style="border:none;padding:0;">Working MVP</div>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-num">03</div>
+        <div class="project-name">Blue Ledger</div>
+        <p class="project-desc">An AI financial document processor. Upload an invoice, receipt, or bank statement and Blue Ledger reads it with the Claude API, then posts the vendor, dates, line items, and totals to a ledger-sheet interface with a plain-English summary. The extraction uses a schema-enforced structured output so the data is guaranteed to be well-formed, and the model is required to flag anything it could not read confidently as an auditor's note rather than guessing. Documents are processed in memory and never stored.</p>
+        <div class="project-tech">
+          <span class="tech-pill">JavaScript</span><span class="tech-pill">Node.js</span><span class="tech-pill">Claude API</span><span class="tech-pill">Structured Outputs</span><span class="tech-pill">Document AI</span>
+        </div>
+        <div style="display:flex;gap:0.5rem;align-items:center;margin-top:0.75rem;flex-wrap:wrap;">
+          <a href="https://github.com/delinakahsay/blue" target="_blank" style="border:1px solid var(--gold);color:var(--gold);text-decoration:none;font-size:0.72rem;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;padding:0.4rem 1rem;border-radius:2px;">View Code</a>
+          <div class="project-status" style="border:none;padding:0;">Working MVP</div>
         </div>
       </div>
  
       <div class="project-card">
-        <div class="project-num">02</div>
+        <div class="project-num">04</div>
         <div class="project-name">StudySync AI</div>
         <p class="project-desc">An AI-powered learning platform designed to plug directly into Blackboard. StudySync takes in student performance data, including grades, quiz results, and what material was missed, and generates a personalized study guide for that student. It also includes an anonymous communication channel between students and faculty: professors can flag areas for improvement and that feedback surfaces inside the student's study guide without being directly attributed. Built with full FERPA compliance as a design constraint throughout, not an afterthought. Taken through requirements, design, and a working prototype via a full SDLC process.</p>
         <div class="project-tech">
@@ -707,7 +733,7 @@
       </div>
  
       <div class="project-card">
-        <div class="project-num">03</div>
+        <div class="project-num">05</div>
         <div class="project-name">Ride-Share Pricing Analysis</div>
         <p class="project-desc">Merged two large Kaggle datasets in Databricks using Python and SQL to analyze how Uber and Lyft actually structure their pricing. We looked at what variables affect price the most and how both platforms respond to high-demand periods. Linear regression identified surge pricing as the primary driver of fare variance between the two. The end product was a data-backed recommendation for what Lyft would need to change in its pricing and customer trust strategy to close the gap with Uber.</p>
         <div class="project-tech">
@@ -717,7 +743,7 @@
       </div>
  
       <div class="project-card">
-        <div class="project-num">04</div>
+        <div class="project-num">06</div>
         <div class="project-name">Student Collect</div>
         <p class="project-desc">Designed a full enterprise database system from scratch using MySQL. Starting from raw stakeholder requirements, I produced ERDs, normalization through third normal form, schema creation scripts, SQL queries, a complete data dictionary, and business rules governing data integrity. The project simulated real enterprise database design work and required translating ambiguous stakeholder needs into precise, structured technical specifications.</p>
         <div class="project-tech">
@@ -727,7 +753,7 @@
       </div>
 
       <div class="project-card">
-        <div class="project-num">05</div>
+        <div class="project-num">07</div>
         <div class="project-name">This Portfolio</div>
         <p class="project-desc">I built this site the same way I approach any product: starting with the user and working backwards. The person reading this has limited time and no obligation to care. So I made decisions about what to show, what to cut, and how to structure the story so it moves. Designed and built in vanilla HTML, CSS, and JavaScript from scratch.</p>
         <div class="project-tech">
