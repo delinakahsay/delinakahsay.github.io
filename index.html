@@ -1,0 +1,949 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Delina Kahsay</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #0D1B3E;
+    --navy-mid: #1A2F5E;
+    --navy-light: #2A4080;
+    --gold: #C9973A;
+    --gold-light: #E8B96A;
+    --gold-pale: #F7EDDA;
+    --white: #FAFAF8;
+    --off-white: #F4F2EE;
+    --muted: #8A8678;
+    --text: #1A1814;
+    --border: rgba(13,27,62,0.10);
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+ 
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--white);
+    color: var(--text);
+    font-size: 16px;
+    line-height: 1.7;
+    overflow-x: hidden;
+  }
+ 
+  /* NAV */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    background: rgba(250,250,248,0.94);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+    padding: 0 2rem;
+    display: flex; align-items: center; justify-content: space-between;
+    height: 60px;
+  }
+  .nav-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--navy);
+    letter-spacing: 0.02em;
+    text-decoration: none;
+  }
+  .nav-links { display: flex; gap: 2rem; list-style: none; }
+  .nav-links a {
+    text-decoration: none;
+    font-size: 0.82rem;
+    font-weight: 400;
+    color: var(--muted);
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    transition: color 0.2s;
+  }
+  .nav-links a:hover { color: var(--navy); }
+  .nav-cta {
+    font-size: 0.78rem;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: var(--white);
+    background: var(--navy);
+    padding: 0.45rem 1.1rem;
+    border-radius: 2px;
+    transition: background 0.2s;
+  }
+  .nav-cta:hover { background: var(--navy-light); }
+ 
+  /* HERO */
+  #hero {
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 58% 42%;
+    padding-top: 60px;
+  }
+  .hero-left {
+    background: var(--navy);
+    display: flex; flex-direction: column; justify-content: center;
+    padding: 5rem 4rem 5rem 5rem;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero-left::before {
+    content: '';
+    position: absolute; top: -60px; right: -60px;
+    width: 300px; height: 300px;
+    border: 1px solid rgba(201,151,58,0.15);
+    border-radius: 50%;
+  }
+  .hero-left::after {
+    content: '';
+    position: absolute; bottom: 80px; left: -80px;
+    width: 200px; height: 200px;
+    border: 1px solid rgba(201,151,58,0.1);
+    border-radius: 50%;
+  }
+  .hero-eyebrow {
+    font-size: 0.72rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 1.5rem;
+    font-weight: 400;
+  }
+  .hero-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(3rem, 5vw, 4.5rem);
+    font-weight: 300;
+    color: var(--white);
+    line-height: 1.05;
+    margin-bottom: 1.5rem;
+    letter-spacing: -0.01em;
+  }
+  .hero-name em { font-family: inherit; font-style: italic; color: var(--gold-light); }
+  .hero-tagline {
+    font-size: 1rem;
+    color: rgba(250,250,248,0.65);
+    max-width: 360px;
+    line-height: 1.75;
+    margin-bottom: 2.5rem;
+    font-weight: 300;
+  }
+  .hero-badges { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 2.5rem; }
+  .badge {
+    font-size: 0.72rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 0.3rem 0.8rem;
+    border: 1px solid rgba(201,151,58,0.4);
+    color: var(--gold-light);
+    border-radius: 2px;
+  }
+  .hero-actions { display: flex; gap: 1rem; flex-wrap: wrap; }
+  .btn-primary {
+    display: inline-block;
+    background: var(--gold);
+    color: var(--navy);
+    text-decoration: none;
+    font-size: 0.78rem;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 0.75rem 1.75rem;
+    border-radius: 2px;
+    transition: background 0.2s;
+  }
+  .btn-primary:hover { background: var(--gold-light); }
+  .btn-outline {
+    display: inline-block;
+    border: 1px solid rgba(250,250,248,0.3);
+    color: rgba(250,250,248,0.8);
+    text-decoration: none;
+    font-size: 0.78rem;
+    font-weight: 400;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 0.75rem 1.75rem;
+    border-radius: 2px;
+    transition: border-color 0.2s, color 0.2s;
+  }
+  .btn-outline:hover { border-color: rgba(250,250,248,0.7); color: var(--white); }
+ 
+  .hero-right {
+    background: var(--off-white);
+    display: flex; flex-direction: column; justify-content: center; align-items: center;
+    gap: 2rem;
+    padding: 5rem 3rem 4rem;
+    position: relative;
+  }
+  .hero-photo-placeholder {
+    width: min(76%, 390px);
+    aspect-ratio: 1;
+    background: #D9D5CC;
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    overflow: hidden;
+   
+  }
+  .hero-photo-placeholder img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+  }
+  .hero-photo-placeholder span {
+    font-size: 0.75rem;
+    color: var(--muted);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+  .hero-stat-row { display: flex; gap: 1rem; align-items: flex-start; justify-content: center; flex-wrap: wrap; width: 100%; z-index: 1; position: relative; }
+  .hero-stat-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2.7rem;
+    font-weight: 600;
+    color: var(--navy);
+    line-height: 1;
+  }
+  .hero-stat-label {
+    font-size: 0.72rem;
+    color: var(--muted);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin-top: 0.2rem;
+  }
+ 
+  /* SECTIONS */
+  section { padding: 5rem 0; }
+  .container { max-width: 1080px; margin: 0 auto; padding: 0 2.5rem; }
+  .section-label {
+    font-size: 0.7rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 0.75rem;
+  }
+  .section-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(2rem, 3.5vw, 3rem);
+    font-weight: 400;
+    color: var(--navy);
+    line-height: 1.15;
+    margin-bottom: 2.5rem;
+  }
+  .divider { width: 40px; height: 1px; background: var(--gold); margin-bottom: 1.5rem; }
+ 
+  /* ABOUT */
+  #about { background: var(--white); }
+  .about-grid {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr;
+    gap: 5rem;
+    align-items: start;
+  }
+  .about-text p {
+    font-size: 1.05rem;
+    color: #3A3830;
+    line-height: 1.85;
+    margin-bottom: 1.25rem;
+    font-weight: 300;
+  }
+  .about-text p strong { color: var(--navy); font-weight: 500; }
+  .about-aside { display: flex; flex-direction: column; gap: 1.5rem; }
+  .aside-card {
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--gold);
+    padding: 1.25rem 1.5rem;
+    border-radius: 2px;
+  }
+  .aside-card-label {
+    font-size: 0.68rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 0.5rem;
+  }
+  .aside-card-value { font-size: 0.95rem; color: var(--navy); font-weight: 500; line-height: 1.5; }
+ 
+  /* EXPERIENCE */
+  #experience { background: var(--navy); }
+  #experience .section-title { color: var(--white); }
+  #experience .section-label { color: var(--gold-light); }
+  .timeline { position: relative; }
+  .timeline::before {
+    content: '';
+    position: absolute; left: 0; top: 0; bottom: 0;
+    width: 1px; background: rgba(201,151,58,0.25);
+  }
+  .timeline-item {
+    padding: 0 0 3rem 2.5rem;
+    position: relative;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s, transform 0.5s;
+  }
+  .timeline-item.visible { opacity: 1; transform: none; }
+  .timeline-dot {
+    position: absolute; left: -5px; top: 6px;
+    width: 11px; height: 11px;
+    border-radius: 50%;
+    background: var(--gold);
+  }
+  .timeline-meta { display: flex; align-items: center; gap: 1rem; margin-bottom: 0.5rem; }
+  .timeline-date {
+    font-size: 0.72rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--gold);
+  }
+  .timeline-org { font-size: 0.78rem; color: rgba(250,250,248,0.45); letter-spacing: 0.04em; }
+  .timeline-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: var(--white);
+    margin-bottom: 0.75rem;
+    line-height: 1.2;
+  }
+  .timeline-desc {
+    font-size: 0.9rem;
+    color: rgba(250,250,248,0.65);
+    line-height: 1.85;
+    max-width: 600px;
+    font-weight: 300;
+  }
+  .timeline-tags { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-top: 1rem; }
+  .timeline-tag {
+    font-size: 0.67rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 0.2rem 0.65rem;
+    border: 1px solid rgba(201,151,58,0.25);
+    color: rgba(201,151,58,0.8);
+    border-radius: 2px;
+  }
+ 
+  /* PROJECTS */
+  #projects { background: var(--off-white); }
+  .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+  }
+  .project-card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 3px;
+    padding: 2rem;
+    display: flex; flex-direction: column;
+    gap: 1rem;
+    opacity: 0;
+    transform: translateY(16px);
+    transition: opacity 0.5s, transform 0.5s, box-shadow 0.25s;
+  }
+  .project-card.visible { opacity: 1; transform: translateY(0); }
+  .project-card:hover { transform: translateY(-4px); box-shadow: 0 12px 32px rgba(13,27,62,0.08); }
+  .project-num { font-family: 'Cormorant Garamond', serif; font-size: 0.85rem; color: var(--gold); font-style: italic; }
+  .project-name { font-family: 'Cormorant Garamond', serif; font-size: 1.45rem; font-weight: 600; color: var(--navy); line-height: 1.2; }
+  .project-desc { font-size: 0.88rem; color: #5A5650; line-height: 1.75; font-weight: 300; flex: 1; }
+  .project-tech { display: flex; flex-wrap: wrap; gap: 0.35rem; }
+  .tech-pill {
+    font-size: 0.67rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    background: var(--gold-pale);
+    color: #7A5A1E;
+    padding: 0.2rem 0.6rem;
+    border-radius: 2px;
+  }
+  .project-status {
+    font-size: 0.72rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--muted);
+    padding-top: 0.75rem;
+    border-top: 1px solid var(--border);
+  }
+ 
+  /* SKILLS */
+  #skills { background: var(--white); }
+  .skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 2rem; }
+  .skill-group-title {
+    font-size: 0.72rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--border);
+  }
+  .skill-list { list-style: none; }
+  .skill-list li {
+    font-size: 0.88rem;
+    color: #3A3830;
+    padding: 0.35rem 0;
+    border-bottom: 1px solid rgba(13,27,62,0.05);
+    font-weight: 300;
+  }
+  .skill-list li:last-child { border-bottom: none; }
+ 
+  /* WHAT'S NEXT */
+  #next {
+    background: var(--gold-pale);
+    border-top: 1px solid rgba(201,151,58,0.2);
+    border-bottom: 1px solid rgba(201,151,58,0.2);
+  }
+  .next-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
+  .next-text p { font-size: 1rem; color: #3A3525; line-height: 1.85; margin-bottom: 1rem; font-weight: 300; }
+  .next-cards { display: flex; flex-direction: column; gap: 1rem; }
+  .next-card {
+    background: var(--white);
+    border: 1px solid rgba(201,151,58,0.25);
+    border-left: 3px solid var(--gold);
+    padding: 1.25rem 1.5rem;
+    border-radius: 2px;
+  }
+  .next-card-label { font-size: 0.68rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); margin-bottom: 0.4rem; }
+  .next-card-value { font-size: 0.95rem; color: var(--navy); font-weight: 500; }
+  .next-card-sub { font-size: 0.82rem; color: var(--muted); margin-top: 0.25rem; }
+ 
+  /* CONTACT */
+  #contact { background: var(--navy); }
+  #contact .section-title { color: var(--white); }
+  #contact .section-label { color: var(--gold-light); }
+  .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: start; }
+  .contact-text { font-size: 1rem; color: rgba(250,250,248,0.65); line-height: 1.85; font-weight: 300; margin-bottom: 1.5rem; }
+  .contact-links { display: flex; flex-direction: column; gap: 0.75rem; }
+  .contact-link {
+    display: flex; align-items: center; gap: 0.75rem;
+    font-size: 0.9rem;
+    color: rgba(250,250,248,0.8);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+  .contact-link:hover { color: var(--gold-light); }
+  .contact-link-icon {
+    width: 32px; height: 32px;
+    border: 1px solid rgba(201,151,58,0.3);
+    display: flex; align-items: center; justify-content: center;
+    border-radius: 2px;
+    flex-shrink: 0;
+    font-size: 0.85rem;
+  }
+  .contact-form { display: flex; flex-direction: column; gap: 1rem; }
+  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+  .form-group { display: flex; flex-direction: column; gap: 0.4rem; }
+  .form-group label { font-size: 0.72rem; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(250,250,248,0.5); }
+  .form-group input, .form-group textarea {
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(201,151,58,0.2);
+    border-radius: 2px;
+    padding: 0.75rem 1rem;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.9rem;
+    color: var(--white);
+    outline: none;
+    transition: border-color 0.2s;
+    resize: vertical;
+  }
+  .form-group input::placeholder, .form-group textarea::placeholder { color: rgba(250,250,248,0.25); }
+  .form-group input:focus, .form-group textarea:focus { border-color: var(--gold); }
+  .form-submit {
+    align-self: flex-start;
+    background: var(--gold);
+    color: var(--navy);
+    border: none;
+    border-radius: 2px;
+    padding: 0.75rem 2rem;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.78rem;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+  .form-submit:hover { background: var(--gold-light); }
+ 
+  /* FOOTER */
+  footer {
+    background: #080F21;
+    padding: 2rem 2.5rem;
+    display: flex; align-items: center; justify-content: space-between;
+  }
+  .footer-name { font-family: 'Cormorant Garamond', serif; font-size: 1rem; color: rgba(250,250,248,0.4); }
+  .footer-note { font-size: 0.72rem; color: rgba(250,250,248,0.25); letter-spacing: 0.06em; }
+ 
+  /* RESPONSIVE */
+  @media (max-width: 768px) {
+    #hero { grid-template-columns: 1fr; }
+    .hero-right { display: none; }
+    .hero-left { padding: 4rem 2rem; }
+    .about-grid, .next-grid, .contact-grid { grid-template-columns: 1fr; gap: 2rem; }
+    .form-row { grid-template-columns: 1fr; }
+    nav { padding: 0 1.25rem; }
+    .nav-links { display: none; }
+    .container { padding: 0 1.5rem; }
+    section { padding: 4rem 0; }
+  }
+</style>
+</head>
+<body>
+ 
+<!-- NAV -->
+<nav>
+  <a href="#" class="nav-name">Delina <em style="font-style:normal; color:var(--gold); font-weight:600;">Kahsay</em></a>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#writing">Writing</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <a href="Delina_Kahsay_Resume.pdf" download class="nav-cta">Download CV</a>
+</nav>
+ 
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-left">
+    <p class="hero-eyebrow">Product · Strategy · Consulting</p>
+    <h1 class="hero-name">Delina<br><span style="font-style:normal; color:var(--gold-light);">Kahsay</span></h1>
+    <p class="hero-tagline">Building at the intersection of AI, product thinking, and data, for people who actually use the things I make.</p>
+    <div class="hero-badges">
+      <span class="badge">GWU Information Systems</span>
+      <span class="badge">3.97 GPA</span>
+      <span class="badge">News Corp · PwC · Energy Innovation Capital</span>
+    </div>
+    <div class="hero-actions">
+      <a href="#projects" class="btn-primary">View My Work</a>
+      <a href="#contact" class="btn-outline">Get In Touch</a>
+    </div>
+  </div>
+  <div class="hero-right">
+    <div class="hero-photo-placeholder" id="heroPhoto">
+      <img src="headshot.jpg" alt="Delina Kahsay" width="1078" height="1038">
+    </div>
+    <div class="hero-stat-row">
+  <div>
+    <div class="hero-stat-num">3+</div>
+    <div class="hero-stat-label">Projects</div>
+  </div>
+  <div>
+    <div class="hero-stat-num">3</div>
+    <div class="hero-stat-label">Scholarships</div>
+  </div>
+  <div>
+    <div class="hero-stat-num">4+</div>
+    <div class="hero-stat-label">Professional experiences</div>
+  </div>
+</div>
+</section>
+ 
+<!-- ABOUT -->
+<section id="about">
+  <div class="container">
+    <p class="section-label">Who I am</p>
+    <div class="divider"></div>
+    <div class="about-grid">
+      <div class="about-text">
+        <h2 class="section-title">Products built for<br><em style="font-family:'Cormorant Garamond',serif;font-style:italic;color:var(--gold);">real people</em></h2>
+        <p>I'm a junior at The George Washington University studying Information Systems, graduating December 2026 with a 3.97 GPA and Dean's List recognition. I care about making technology that is <strong>accessible, human, and useful</strong>, and I've built a track record around that belief quickly.</p>
+        <p>I've worked with News Corp diagnosing why Gen-Z users were disengaging from AI features, with PwC helping a nonprofit rethink how it raises funding, and independently built an AI-powered shopping product from scratch. I don't wait to be handed the right conditions. I build them.</p>
+        <p>Outside of work, I'm drawn to edtech, fintech, consumer products, and anything where strong product thinking can make something genuinely better for the people using it. I speak English and Amharic.</p>
+      </div>
+      <div class="about-aside">
+        <div class="aside-card">
+          <div class="aside-card-label">University</div>
+          <div class="aside-card-value">The George Washington University<br>B.S. Information Systems</div>
+        </div>
+        <div class="aside-card">
+          <div class="aside-card-label">Honors and Awards</div>
+          <div class="aside-card-value">Dean's List<br>Outstanding Academic Achievement Award<br>Bank of America Scholar<br>Elizabeth Brinkerhoff Scholar<br>Chen Family Scholar</div>
+        </div>
+        <div class="aside-card">
+          <div class="aside-card-label">Languages</div>
+          <div class="aside-card-value">English · Amharic</div>
+        </div>
+        <div class="aside-card">
+          <div class="aside-card-label">Based In</div>
+          <div class="aside-card-value">Washington, DC area</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+ 
+<!-- EXPERIENCE -->
+<section id="experience">
+  <div class="container">
+    <p class="section-label">Career</p>
+    <div class="divider" style="background:rgba(201,151,58,0.5)"></div>
+    <h2 class="section-title">Experience</h2>
+    <div class="timeline">
+ 
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-meta">
+          <span class="timeline-date">Aug 2025 – Present</span>
+          <span class="timeline-org">The George Washington University</span>
+        </div>
+        <div class="timeline-title">Teaching Assistant</div>
+        <p class="timeline-desc">Every week I work directly with 45+ students through the Business Systems Development course in the Information Systems program. I facilitate labs on Critical Path, DFDs, ERDs, and more and I evaluate over 90 student deliverables per week, giving each one written feedback. The work that matters most to me here is the one-on-one time during office hours, helping students understand the material, sharpen their logic when diagramming, and actually understand why the concepts connect the way they do.</p>
+        <div class="timeline-tags">
+          <span class="timeline-tag">Systems Analysis</span><span class="timeline-tag">ERD Design</span><span class="timeline-tag">Agile</span><span class="timeline-tag">SQL</span><span class="timeline-tag">Documentation</span>
+        </div>
+      </div>
+ 
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-meta">
+          <span class="timeline-date">May – Aug 2025</span>
+          <span class="timeline-org">News Corp · Remote</span>
+        </div>
+        <div class="timeline-title">AI Product Strategy Extern and Cohort Leader</div>
+        <p class="timeline-desc">I was brought on to help figure out why Gen-Z users were disengaging from AI personalization features across News Corp's news apps. As Cohort Leader, I designed and ran a mixed-methods survey coordinated across 50 externs, combining responses to build a statistically meaningful picture of the problem. The analysis surfaced three core barriers: data privacy concerns, perceived information bubbles, and a lack of content transparency. I chose The Times as my focus app, ran a full audit of its current AI features, and developed three specific product recommendations with a phased rollout and A/B testing framework for the engineering team. My submission was selected as the most comprehensive in the cohort, and I was asked to present directly to the VP of Engineering and a senior Product Manager. The team accepted the recommendations and indicated they would move forward with them.</p>
+        <div class="timeline-tags">
+          <span class="timeline-tag">User Research</span><span class="timeline-tag">Product Strategy</span><span class="timeline-tag">A/B Testing</span><span class="timeline-tag">KPI Analysis</span><span class="timeline-tag">Figma</span>
+        </div>
+      </div>
+ 
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-meta">
+          <span class="timeline-date">Jan – Mar 2025</span>
+          <span class="timeline-org">PwC · Remote</span>
+        </div>
+        <div class="timeline-title">Non-Profit Consulting Extern</div>
+        <p class="timeline-desc">The client was a nonprofit in a tough spot: their donor base was aging, donations were declining, and they were too reliant on individual giving. I started by researching comparable organizations to understand where sustainable long-term funding was actually coming from, then shifted the strategy toward institutional donors. I evaluated over 150 potential funding sources and organized everything in a structured Excel tracker scoring each one on organizational fit, likelihood, application complexity, and timeline. I narrowed the field to three high-potential institutional donors representing up to $1M in funding, built detailed application roadmaps for each, and presented the full strategy to PwC consultants and the client directly. They found it compelling and moved forward with applying to all three.</p>
+        <div class="timeline-tags">
+          <span class="timeline-tag">Strategic Research</span><span class="timeline-tag">Excel</span><span class="timeline-tag">Client Presentation</span><span class="timeline-tag">Consulting</span>
+        </div>
+      </div>
+ 
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-meta">
+          <span class="timeline-date">Sep – Nov 2024</span>
+          <span class="timeline-org">Energy Innovation Capital · Remote</span>
+        </div>
+        <div class="timeline-title">Venture Capital Analyst Extern</div>
+        <p class="timeline-desc">I conducted due diligence on early-stage technology startups being evaluated for investment, looking at operational viability, market positioning, and product strategy. I assessed AI and IoT solutions against industry benchmarks and produced structured analysis that fed into the firm's portfolio recommendations. This was my first real exposure to how investors evaluate technology products and teams, and it sharpened how I think about market fit and operational risk.</p>
+        <div class="timeline-tags">
+          <span class="timeline-tag">Due Diligence</span><span class="timeline-tag">Market Analysis</span><span class="timeline-tag">Investment Research</span>
+        </div>
+      </div>
+ 
+    </div>
+  </div>
+</section>
+ 
+<!-- LEADERSHIP -->
+<section id="leadership" style="background:#0A1530; padding: 1rem 0 4rem;">
+  <div class="container">
+    <p class="section-label" style="color:var(--gold-light)">Leadership</p>
+    <div class="divider" style="background:rgba(201,151,58,0.4)"></div>
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-meta">
+          <span class="timeline-date">Jan 2025 – Present</span>
+          <span class="timeline-org">GWU SITA</span>
+        </div>
+        <div class="timeline-title">Co-Founder<br>Executive VP → President<br>Student Information Technology Association</div>
+        <p class="timeline-desc">.When we started at GWU there was no student organization for Information Systems majors. No community, no industry connections, no pipeline. My co-founders and I built one from scratch. We set up the governance structure, recruited founding members, built partnerships with Deloitte, Nvidia, and AWS, and designed the event programming from the ground up. Within one semester SITA had grown to 100+ members. I also helped plan a campus AWS sustainability hackathon as VP, coordinating student teams, corporate judges, and university logistics from start to finish. SITA has become a real resource for ISTM and all other tech-interested students who previously had no dedicated professional and social community.</p>
+        <div class="timeline-tags">
+          <span class="timeline-tag">Org Founding</span><span class="timeline-tag">Partnership Dev</span><span class="timeline-tag">Event Management</span>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-meta">
+          <span class="timeline-date">Jan 2026 – Present</span>
+          <span class="timeline-org">ColorStack · GWU Chapter</span>
+        </div>
+        <div class="timeline-title">Founder and President, ColorStack Chapter</div>
+        <p class="timeline-desc">I founded GWU's ColorStack chapter to create a dedicated pipeline connecting Black and Latinx computing students to technical recruiting, mentorship, and professional development. ColorStack is a national organization focused on increasing the number of Black and Latinx students who graduate with computing degrees and build careers in tech. I established the chapter from the ground up, building the infrastructure and programming needed to connect members with recruiters and professionals at top firms.</p>
+        <div class="timeline-tags">
+          <span class="timeline-tag">DEI</span><span class="timeline-tag">Community Building</span><span class="timeline-tag">Recruiting Pipeline</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+ 
+<!-- PROJECTS -->
+<section id="projects">
+  <div class="container">
+    <p class="section-label">Portfolio</p>
+    <div class="divider"></div>
+    <h2 class="section-title">Projects</h2>
+    <div class="projects-grid">
+ 
+      <div class="project-card">
+        <div class="project-num">01</div>
+        <div class="project-name">Olio</div>
+        <p class="project-desc">An AI-powered shopping assistant that lets users describe what they're looking for in natural language, the way they'd describe it to a friend. Olio searches the web in real time, surfaces matching products, and organizes them in a clean interface with a cart and saved items feature. Built and iterated independently from concept to working product, with ongoing user testing shaping each iteration.</p>
+        <div class="project-tech">
+          <span class="tech-pill">Python</span><span class="tech-pill">GPT API</span><span class="tech-pill">SERP API</span><span class="tech-pill">Prompt Engineering</span><span class="tech-pill">Cursor</span>
+        </div>
+        <div style="display:flex;gap:0.5rem;align-items:center;margin-top:0.75rem;">
+          <a href="https://olio-com.vercel.app/" target="_blank" style="background:var(--gold);color:var(--navy);text-decoration:none;font-size:0.72rem;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;padding:0.4rem 1rem;border-radius:2px;">Try Olio</a>
+          <div class="project-status" style="border:none;padding:0;">In development</div>
+        </div>
+      </div>
+ 
+      <div class="project-card">
+        <div class="project-num">02</div>
+        <div class="project-name">StudySync AI</div>
+        <p class="project-desc">An AI-powered learning platform designed to plug directly into Blackboard. StudySync takes in student performance data, including grades, quiz results, and what material was missed, and generates a personalized study guide for that student. It also includes an anonymous communication channel between students and faculty: professors can flag areas for improvement and that feedback surfaces inside the student's study guide without being directly attributed. Built with full FERPA compliance as a design constraint throughout, not an afterthought. Taken through requirements, design, and a working prototype via a full SDLC process.</p>
+        <div class="project-tech">
+          <span class="tech-pill">No-Code Dev</span><span class="tech-pill">AI Integration</span><span class="tech-pill">FERPA</span><span class="tech-pill">SDLC</span><span class="tech-pill">Blackboard</span>
+        </div>
+        <div class="project-status">Prototype complete · full SDLC</div>
+      </div>
+ 
+      <div class="project-card">
+        <div class="project-num">03</div>
+        <div class="project-name">Ride-Share Pricing Analysis</div>
+        <p class="project-desc">Merged two large Kaggle datasets in Databricks using Python and SQL to analyze how Uber and Lyft actually structure their pricing. We looked at what variables affect price the most and how both platforms respond to high-demand periods. Linear regression identified surge pricing as the primary driver of fare variance between the two. The end product was a data-backed recommendation for what Lyft would need to change in its pricing and customer trust strategy to close the gap with Uber.</p>
+        <div class="project-tech">
+          <span class="tech-pill">Python</span><span class="tech-pill">SQL</span><span class="tech-pill">Databricks</span><span class="tech-pill">Google Colab</span><span class="tech-pill">Linear Regression</span>
+        </div>
+        <div class="project-status">Completed · IoT Applications and Management</div>
+      </div>
+ 
+      <div class="project-card">
+        <div class="project-num">04</div>
+        <div class="project-name">Student Collect</div>
+        <p class="project-desc">Designed a full enterprise database system from scratch using MySQL. Starting from raw stakeholder requirements, I produced ERDs, normalization through third normal form, schema creation scripts, SQL queries, a complete data dictionary, and business rules governing data integrity. The project simulated real enterprise database design work and required translating ambiguous stakeholder needs into precise, structured technical specifications.</p>
+        <div class="project-tech">
+          <span class="tech-pill">MySQL</span><span class="tech-pill">ERD Design</span><span class="tech-pill">Database Normalization</span><span class="tech-pill">SQL</span>
+        </div>
+        <div class="project-status">Completed · Database Management</div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-num">05</div>
+        <div class="project-name">This Portfolio</div>
+        <p class="project-desc">I built this site the same way I approach any product: starting with the user and working backwards. The person reading this has limited time and no obligation to care. So I made decisions about what to show, what to cut, and how to structure the story so it moves. Designed and built in vanilla HTML, CSS, and JavaScript from scratch.</p>
+        <div class="project-tech">
+          <span class="tech-pill">HTML</span><span class="tech-pill">CSS</span><span class="tech-pill">JavaScript</span><span class="tech-pill">Product Thinking</span>
+        </div>
+        <div class="project-status">Live · delinakahsay.com</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- WRITING -->
+<section id="writing" style="background:var(--off-white); border-top:1px solid var(--border);">
+  <div class="container">
+    <p class="section-label">Writing</p>
+    <div class="divider"></div>
+    <h2 class="section-title">Selected writing</h2>
+    <div style="border:1px solid var(--border); border-left:3px solid var(--gold); border-radius:2px; padding:1.5rem 1.75rem; background:var(--white); max-width:640px;">
+      <div style="font-family:'Cormorant Garamond',serif; font-size:1.2rem; font-weight:600; color:var(--navy); margin-bottom:0.5rem;">The Illusion of Value</div>
+      <p style="font-size:0.9rem; color:#5A5650; line-height:1.75; font-weight:300; margin-bottom:1rem;">An ethics paper exploring how market signals shape perceptions of value, arguing that firms may bear moral responsibility for sustaining misleading narratives even when all public statements are technically true.</p>
+      <a href="The%20Illusion%20of%20Value.pdf" target="_blank" style="display:inline-block; background:var(--navy); color:var(--white); text-decoration:none; font-size:0.72rem; font-weight:500; letter-spacing:0.08em; text-transform:uppercase; padding:0.45rem 1.1rem; border-radius:2px;">Read the paper</a>
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+  <div class="container">
+    <p class="section-label">Capabilities</p>
+    <div class="divider"></div>
+    <h2 class="section-title">Skills</h2>
+    <div class="skills-grid">
+      <div>
+        <div class="skill-group-title">Programming</div>
+        <ul class="skill-list">
+          <li>Python</li>
+          <li>SQL</li>
+          <li>JavaScript</li>
+          <li>HTML / CSS</li>
+          <li>R</li>
+        </ul>
+      </div>
+      <div>
+        <div class="skill-group-title">Tools and Platforms</div>
+        <ul class="skill-list">
+          <li>Excel (PivotTables, Power Query, VBA)</li>
+          <li>Tableau / Power BI</li>
+          <li>Databricks / MySQL</li>
+          <li>GitHub / Jupyter / Jira</li>
+          <li>Figma / LucidChart / Postman</li>
+        </ul>
+      </div>
+      <div>
+        <div class="skill-group-title">Product and AI</div>
+        <ul class="skill-list">
+          <li>User research (surveys, qual + quant)</li>
+          <li>Product strategy and recommendations</li>
+          <li>KPI definition and A/B testing</li>
+          <li>LLM integration (GPT, SERP APIs)</li>
+          <li>Prompt engineering</li>
+          <li>Agile / Scrum</li>
+        </ul>
+      </div>
+      <div>
+        <div class="skill-group-title">Analytical</div>
+        <ul class="skill-list">
+          <li>Requirements gathering</li>
+          <li>Process mapping and SOP development</li>
+          <li>Data storytelling</li>
+          <li>Customer journey mapping</li>
+          <li>ERD and systems design</li>
+        </ul>
+      </div>
+    </div>
+    <div style="margin-top: 2.5rem; padding: 1.25rem 1.5rem; background: var(--off-white); border-left: 3px solid var(--gold); border-radius: 2px; display: inline-block;">
+      <span style="font-size:0.72rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--muted);">Certifications</span>
+      <p style="font-size:0.95rem;color:var(--navy);font-weight:500;margin-top:0.3rem;">Google Data Analytics Professional Certificate</p>
+      <p style="font-size:0.95rem;color:var(--navy);font-weight:500;margin-top:0.4rem;">Google Project Management Certificate</p>
+    </div>
+  </div>
+</section>
+ 
+<!-- WHAT'S NEXT -->
+<section id="next">
+  <div class="container">
+    <p class="section-label">Looking Ahead</p>
+    <div class="divider"></div>
+    <div class="next-grid">
+      <div class="next-text">
+        <h2 class="section-title">What's next<br>for me</h2>
+        <p>I graduate in December 2026 and I'm looking for a full-time role in product management, strategy, or consulting at a firm where I can work on problems that are genuinely hard and worth solving.</p>
+        <p>I've also been accepted into GWU's 4+1 MSIST program, which lets me complete my master's in Information Systems Technology alongside my bachelor's. I'm most drawn to roles at the intersection of AI, data, and product in tech, consulting, fintech, or edtech.</p>
+        <p>If you're building something that fits, I'd like to hear from you.</p>
+        <a href="#contact" class="btn-primary" style="margin-top:0.5rem; display:inline-block;">Let's talk</a>
+      </div>
+      <div class="next-cards">
+        <div class="next-card">
+          <div class="next-card-label">Graduation</div>
+          <div class="next-card-value">December 2026</div>
+          <div class="next-card-sub">B.S. Information Systems · GWU</div>
+        </div>
+        <div class="next-card">
+          <div class="next-card-label">Graduate Program</div>
+          <div class="next-card-value">MS Information Systems Technology</div>
+          <div class="next-card-sub">GWU 4+1 Program · Accepted</div>
+        </div>
+        <div class="next-card">
+          <div class="next-card-label">Target Roles</div>
+          <div class="next-card-value">Product Manager · Strategy and Ops · Consulting Analyst</div>
+          <div class="next-card-sub">Open to tech, consulting, fintech, edtech, government</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+ 
+<!-- CONTACT -->
+<section id="contact">
+  <div class="container">
+    <p class="section-label">Let's Connect</p>
+    <div class="divider" style="background:rgba(201,151,58,0.5)"></div>
+    <h2 class="section-title">Contact</h2>
+    <div class="contact-grid">
+      <div>
+        <p class="contact-text">I'm always open to conversations about products, opportunities, or ideas worth exploring. Reach out directly or use the form.</p>
+        <div class="contact-links">
+          <a href="mailto:kahdelina@gmail.com" class="contact-link">
+            <span class="contact-link-icon">✉</span>
+            kahdelina@gmail.com
+          </a>
+          <a href="https://www.linkedin.com/in/delinakahsay" target="_blank" class="contact-link">
+            <span class="contact-link-icon">in</span>
+            linkedin.com/in/delinakahsay
+          </a>
+          <a href="https://github.com/delinakahsay" target="_blank" class="contact-link">
+            <span class="contact-link-icon">gh</span>
+            github.com/delinakahsay
+          </a>
+        </div>
+      </div>
+      <form class="contact-form" id="contactForm">
+        <div class="form-row">
+          <div class="form-group">
+            <label>Name</label>
+            <input type="text" name="name" placeholder="Your name" required>
+          </div>
+          <div class="form-group">
+            <label>Email</label>
+            <input type="email" name="email" placeholder="your@email.com" required>
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Subject</label>
+          <input type="text" name="subject" placeholder="Opportunity, collaboration, coffee...">
+        </div>
+        <div class="form-group">
+          <label>Message</label>
+          <textarea name="message" rows="5" placeholder="Tell me what's on your mind." required></textarea>
+        </div>
+        <button type="submit" class="form-submit" id="formBtn">Send Message</button>
+        <p id="formMsg" style="display:none; font-size:0.85rem; margin-top:0.75rem; color:var(--gold-light);"></p>
+      </form>
+    </div>
+  </div>
+</section>
+ 
+<!-- FOOTER -->
+<footer>
+  <div class="footer-name">Delina Kahsay</div>
+  <div class="footer-note">2026 · Washington, DC</div>
+</footer>
+ 
+<script>
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry, i) => {
+      if (entry.isIntersecting) {
+        setTimeout(() => entry.target.classList.add('visible'), i * 80);
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.timeline-item, .project-card').forEach(el => observer.observe(el));
+ 
+  document.getElementById('contactForm').addEventListener('submit', async function(e) {
+    e.preventDefault();
+    const btn = document.getElementById('formBtn');
+    const msg = document.getElementById('formMsg');
+    const data = new FormData(this);
+    btn.textContent = 'Sending...';
+    btn.disabled = true;
+    try {
+      const res = await fetch('https://formspree.io/f/mojbgeed', {
+        method: 'POST',
+        body: data,
+        headers: { 'Accept': 'application/json' }
+      });
+      if (res.ok) {
+        msg.textContent = 'Message sent. I will get back to you soon.';
+        msg.style.display = 'block';
+        this.reset();
+        btn.textContent = 'Sent';
+      } else {
+        msg.textContent = 'Something went wrong. Try emailing me directly at kahdelina@gmail.com';
+        msg.style.display = 'block';
+        btn.textContent = 'Send Message';
+        btn.disabled = false;
+      }
+    } catch(err) {
+      msg.textContent = 'Could not send. Try emailing me directly at kahdelina@gmail.com';
+      msg.style.display = 'block';
+      btn.textContent = 'Send Message';
+      btn.disabled = false;
+    }
+  });
+</script>
+ 
+</body>
+</html>

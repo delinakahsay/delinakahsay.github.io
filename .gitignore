@@ -1,0 +1,6 @@
+# OS / editor / AI tooling
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+.claude/
