@@ -66,6 +66,7 @@ h1{font-family:var(--display); font-weight:500; font-size:clamp(1.9rem,4.6vw,2.6
 .lede{font-size:19px; line-height:1.55; margin:0 0 14px; max-width:40ch}
 .status{font-size:16px; color:var(--fg2); display:flex; align-items:baseline; gap:9px; margin:0 0 14px}
 .dot{width:6px; height:6px; border-radius:50%; background:var(--accent); flex:none; transform:translateY(-3px)}
+.auth{font-size:15px; color:var(--fg2); margin:0 0 14px; line-height:1.5}
 .prev{font-size:15.5px; color:var(--fg2); margin:0; line-height:1.6}
 .prev b{color:var(--fg); font-weight:400; border-bottom:1px solid var(--rule)}
 
@@ -85,8 +86,10 @@ h1{font-family:var(--display); font-weight:500; font-size:clamp(1.9rem,4.6vw,2.6
 .org{font-size:15.5px; color:var(--fg2); margin:2px 0 12px}
 .case{display:grid; grid-template-columns:104px minmax(0,1fr); gap:6px 18px; margin:0}
 .case dt{font-size:13px; letter-spacing:.1em; text-transform:uppercase; color:var(--fg2); padding-top:3px}
-.case dd{margin:0; font-size:15.5px; line-height:1.55}
-.case dd.result{color:var(--fg)}
+.case dd{margin:0; font-size:15.5px; line-height:1.55; color:var(--fg2)}
+.case dd.result{color:var(--fg); font-size:16.5px; border-left:2px solid var(--accent);
+                padding-left:14px; margin-left:-16px}
+.case dt.r{color:var(--accent)}
 .plain{margin:0; font-size:15.5px; line-height:1.55}
 
 /* projects */
@@ -94,6 +97,9 @@ h1{font-family:var(--display); font-weight:500; font-size:clamp(1.9rem,4.6vw,2.6
 .card{border:1px solid var(--rule); border-radius:5px; padding:22px;
       display:flex; flex-direction:column; gap:12px; min-width:0}
 .tag{font-size:13.5px; color:var(--fg2); margin:0}
+.pill{display:inline-block; font-size:11.5px; letter-spacing:.08em; text-transform:uppercase;
+      color:var(--accent); border:1px solid var(--accent); border-radius:999px;
+      padding:1px 9px; margin-right:9px; vertical-align:1px}
 .card h3{font-family:var(--display); font-weight:400; font-size:1.18rem;
          letter-spacing:.04em; margin:0; line-height:1.3}
 .card p{margin:0; font-size:15.5px; line-height:1.55}
@@ -176,6 +182,10 @@ footer{padding-block:46px 72px; margin-top:46px; border-top:1px solid var(--rule
        font-size:14.5px; color:var(--fg2)}
 
 @media (max-width:700px){
+  .bar{flex-wrap:nowrap; gap:12px}
+  .bar nav{flex-wrap:nowrap; overflow-x:auto; min-width:0; scrollbar-width:none; -ms-overflow-style:none}
+  .bar nav::-webkit-scrollbar{display:none}
+  .bar nav a{white-space:nowrap}
   .about, .contact-grid{grid-template-columns:1fr; gap:28px}
   .case{grid-template-columns:1fr; gap:2px 0}
   .case dt{padding-top:8px}
@@ -212,7 +222,8 @@ footer{padding-block:46px 72px; margin-top:46px; border-top:1px solid var(--rule
     <div>
       <h1>Delina Kahsay</h1>
       <p class="lede">I find out what people actually need, build it, and make the case for it.</p>
-      <p class="status"><span class="dot"></span>Graduating December 2026. Open to full-time roles.</p>
+      <p class="status"><span class="dot"></span>Graduating December 2026, looking for full-time roles in product, analytics, and technology consulting.</p>
+      <p class="auth">Authorized to work in the US without sponsorship. Based in Washington, DC and open to relocating.</p>
       <p class="prev">Information Systems at <b>George Washington University</b>. Currently building at <b>LawRobo</b>. Previously <b>News Corp</b>, <b>PwC</b>, and <b>Energy Innovation Capital</b>.</p>
     </div>
   </header>
@@ -224,13 +235,13 @@ footer{padding-block:46px 72px; margin-top:46px; border-top:1px solid var(--rule
 
     <article class="role">
       <div class="role-top"><h3>AI Product Engineer</h3><span class="when">Sep 2026 &ndash; Present</span></div>
-      <p class="org">LawRobo</p>
+      <p class="org">LawRobo, an early-stage legal AI startup</p>
       <dl class="case">
         <dt>Problem</dt>
         <dd>An early-stage AI legal assistant with more possible features than time to build them, and no one sitting between deciding what users needed and actually shipping it.</dd>
         <dt>What I did</dt>
         <dd>Research user needs and competing tools in the legal AI market, bring prioritized recommendations to the founder in weekly product reviews, then write the requirements and build the approved features, carrying each from spec through implementation and testing.</dd>
-        <dt>Result</dt>
+        <dt class="r">Result</dt>
         <dd class="result">15+ features shipped into production as one of two technical leads, on a product now in active use by clients.</dd>
       </dl>
     </article>
@@ -243,7 +254,7 @@ footer{padding-block:46px 72px; margin-top:46px; border-top:1px solid var(--rule
         <dd>45+ students arriving with very different technical backgrounds, and inconsistent quality across 90+ deliverables a week.</dd>
         <dt>What I did</dt>
         <dd>Lead weekly labs across two courses, Business Systems Development and Management Information Systems, covering critical path, DFDs, and ERDs. Run 2 to 3 one-on-one sessions a week and set documentation standards with a structured feedback process.</dd>
-        <dt>Result</dt>
+        <dt class="r">Result</dt>
         <dd class="result">95% of students who came to one-on-ones earned an A, and submission quality improved semester over semester.</dd>
       </dl>
     </article>
@@ -256,7 +267,7 @@ footer{padding-block:46px 72px; margin-top:46px; border-top:1px solid var(--rule
         <dd>Gen-Z readers were disengaging from AI personalization features, and trust, adoption, and engagement KPIs were lagging.</dd>
         <dt>What I did</dt>
         <dd>Designed a mixed-methods survey run across a 50-extern cohort and reaching 200+ respondents, analyzing scored and open-ended answers in Excel and AI tools. Isolated three root causes: data privacy concerns, information bubbles, and a lack of content transparency. Audited The Times app and turned the findings into four Figma-prototyped recommendations with a phased rollout and A/B testing plan.</dd>
-        <dt>Result</dt>
+        <dt class="r">Result</dt>
         <dd class="result">Presented to the VP of Engineering and a senior Product Manager, whose team adopted the work as the most comprehensive in the cohort. Standardized the cohort's method and schedule for 100% on-time completion.</dd>
       </dl>
     </article>
@@ -269,7 +280,7 @@ footer{padding-block:46px 72px; margin-top:46px; border-top:1px solid var(--rule
         <dd>A nonprofit client was too dependent on a shrinking base of individual donors.</dd>
         <dt>What I did</dt>
         <dd>Shifted the strategy toward institutional funding and scored 50+ sources in an Excel framework on organizational fit, likelihood of award, timing, and renewability.</dd>
-        <dt>Result</dt>
+        <dt class="r">Result</dt>
         <dd class="result">Narrowed the field to four institutional funders representing over $1M in potential funding and built application roadmaps for each. Presented to PwC leadership and the client, who applied to all four.</dd>
       </dl>
     </article>
@@ -297,7 +308,7 @@ footer{padding-block:46px 72px; margin-top:46px; border-top:1px solid var(--rule
       </article>
 
       <article class="card">
-        <p class="tag">Analytics &middot; Project lead &middot; Spring 2026</p>
+        <p class="tag"><span class="pill">Interactive</span>Analytics &middot; Project lead &middot; Spring 2026</p>
         <h3>Ride-Share Pricing</h3>
         <p>637,976 cleaned Boston trips in Databricks. A regression on fare found distance behaving predictably and surge doing the real damage.</p>
         <p class="stack">PySpark, SQL, Databricks, linear regression</p>
@@ -331,7 +342,7 @@ footer{padding-block:46px 72px; margin-top:46px; border-top:1px solid var(--rule
       </article>
 
       <article class="card">
-        <p class="tag">Web analytics &middot; ISTM 4209 &middot; 2026</p>
+        <p class="tag"><span class="pill">Interactive</span>Web analytics &middot; ISTM 4209 &middot; 2026</p>
         <h3>Shein Benchmarking</h3>
         <p>Benchmarked Shein against Zara, H&amp;M, ASOS, and Temu across traffic, engagement, and conversion. It wins on attention and loses on the only step that pays: checkout.</p>
         <p class="stack">Funnel analysis, competitive benchmarking, Excel</p>
@@ -376,19 +387,7 @@ footer{padding-block:46px 72px; margin-top:46px; border-top:1px solid var(--rule
         <p class="links"><a href="https://github.com/delinakahsay/blueledger" target="_blank" rel="noopener">View code</a></p>
       </article>
 
-      <article class="card">
-        <p class="tag">Prototype &middot; Course project</p>
-        <h3>StudySync AI</h3>
-        <p>A learning platform designed to plug into Blackboard. It turns a student's grades, quiz results, and missed material into a personalized study guide, and gives faculty an anonymous channel to flag areas for improvement. FERPA compliance was a design constraint from the first requirement through a full SDLC.</p>
-        <p class="stack">No-code development, AI integration, requirements and SDLC</p>
-      </article>
-
-      <article class="card">
-        <p class="tag">Complete &middot; Database Management</p>
-        <h3>Student Collect</h3>
-        <p>An enterprise database designed from raw stakeholder requirements: ERDs, normalization to third normal form, schema scripts, queries, a complete data dictionary, and the business rules that protect data integrity.</p>
-        <p class="stack">MySQL, ERD design, normalization, SQL</p>
-      </article>
+      
 
     </div>
   </section>
@@ -413,7 +412,7 @@ footer{padding-block:46px 72px; margin-top:46px; border-top:1px solid var(--rule
     <article class="lead">
       <div class="role-top"><h3>Chapter Founder and President, ColorStack at GW</h3><span class="when">Jan 2026 &ndash; Present</span></div>
       <p class="org">George Washington University</p>
-      <p class="plain">ColorStack is a national organization growing the number of Black and Latinx students who graduate with computing degrees and build careers in tech. I'm building GW's chapter to connect those students with recruiting pipelines, mentorship, and professionals at major technology and consulting firms.</p>
+      <p class="plain">I started GW's chapter after watching classmates miss recruiting cycles nobody had told them about. So far that means an interest list of 100+ students and a route into the mentorship, recruiting pipelines, and industry contacts ColorStack's national network opens up for Black and Latinx computing students.</p>
       <ul class="facts">
         <li><b>100+</b>students on the chapter interest list</li>
       </ul>
@@ -440,17 +439,13 @@ footer{padding-block:46px 72px; margin-top:46px; border-top:1px solid var(--rule
           <ul>
             <li>Dean's List</li>
             <li>Outstanding Academic Achievement Award</li>
-            <li>Bank of America Scholar</li>
-            <li>Elizabeth Brinkerhoff Scholar</li>
-            <li>Chen Family Scholar</li>
+            <li>Recipient of three named university scholarships</li>
           </ul>
         </div>
         <div>
           <h3>Certifications</h3>
           <ul>
             <li>Deloitte Digital Salesforce Academy, 2026</li>
-            <li>Google Data Analytics Professional Certificate</li>
-            <li>Google Project Management Certificate</li>
             <li>AWS Cloud Certification <span class="sub">(in progress)</span></li>
           </ul>
         </div>
