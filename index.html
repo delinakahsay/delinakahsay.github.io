@@ -106,8 +106,17 @@ h1{font-family:var(--display); font-weight:500; font-size:clamp(1.9rem,4.6vw,2.6
 .stack{font-size:13.5px; color:var(--fg2)}
 .links{display:flex; gap:16px; flex-wrap:wrap; font-size:15px}
 .links a{text-decoration:none; border-bottom:1px solid var(--accent); padding-bottom:1px}
-.shot{display:block; width:100%; height:auto; border:1px solid var(--rule); border-radius:4px}
-.shot-cap{font-size:13px; color:var(--fg2); margin:-4px 0 0; line-height:1.45}
+.unfurl{display:block; border:1px solid var(--rule); border-radius:5px; overflow:hidden;
+         text-decoration:none; color:inherit; background:var(--bg);
+         transition:border-color .15s ease, box-shadow .15s ease}
+.unfurl:hover{border-color:var(--accent); box-shadow:0 1px 10px rgba(20,24,33,.07)}
+.unfurl img{display:block; width:100%; height:auto; border-bottom:1px solid var(--rule)}
+.u-meta{display:block; padding:13px 15px 14px}
+.u-host{display:block; font-size:12.5px; color:var(--fg2); letter-spacing:.02em; margin-bottom:3px}
+.u-title{display:block; font-family:var(--display); font-size:1.02rem; letter-spacing:.03em;
+         color:var(--fg); margin-bottom:4px}
+.unfurl:hover .u-title{color:var(--accent)}
+.u-desc{display:block; font-size:14px; line-height:1.45; color:var(--fg2)}
 
 /* live models */
 .live{border-top:1px solid var(--rule); padding-top:16px; margin-top:auto;
@@ -305,10 +314,15 @@ footer{padding-block:46px 72px; margin-top:46px; border-top:1px solid var(--rule
         <p class="tag">In development &middot; Co-team lead &middot; Capstone</p>
         <h3>Campus Filing</h3>
         <p>A tax guidance site for college students filing for the first time: a filing plan walkthrough, a refund estimator, deadlines, and guides for gig income, multi-state, and international students. Built for a six-person capstone team with GW as the client. I co-lead the team and write all of the code.</p>
-        <img class="shot" src="campusfiling-preview.jpg" alt="Campus Filing's refund estimator showing a $620 refund with a line-by-line breakdown: total income $9,400, standard deduction $9,850 at the dependent limit, taxable income $0." width="900" height="536" loading="lazy">
-        <p class="shot-cap">Four questions in, a number out, with every line of the arithmetic shown.</p>
         <p class="stack">JavaScript, SQL, multi-page web app, DFDs and requirements</p>
-        <p class="links"><a href="https://delinakahsay.github.io/Campusfiling/" target="_blank" rel="noopener">Visit the site</a></p>
+        <a class="unfurl" href="https://delinakahsay.github.io/Campusfiling/" target="_blank" rel="noopener">
+          <img src="campusfiling-preview.jpg" alt="Campus Filing's refund estimator: a $620 refund with the line-by-line breakdown, including a $9,850 dependent standard deduction and $0 taxable income." width="900" height="536" loading="lazy">
+          <span class="u-meta">
+            <span class="u-host">delinakahsay.github.io</span>
+            <span class="u-title">Campus Filing</span>
+            <span class="u-desc">Tax guidance built for college students. Know your forms, your credits, and your deadlines before you open any software.</span>
+          </span>
+        </a>
       </article>
 
       <article class="card">
@@ -372,6 +386,14 @@ footer{padding-block:46px 72px; margin-top:46px; border-top:1px solid var(--rule
         <h3>Olio</h3>
         <p>An AI shopping assistant built to test one question: can describing what you want replace keyword search? A natural-language query becomes structured product results, with accounts, saved items, and a cart that persists across sessions. User testing with ten people cut average search time in half.</p>
         <p class="stack">React, JavaScript, GPT API, SerpAPI, Supabase, serverless functions</p>
+        <a class="unfurl" href="https://olio-com.vercel.app/" target="_blank" rel="noopener">
+          <img src="olio-preview.jpg" alt="Olio returning 12 results for the query &quot;a warm waterproof coat for walking to class in the rain&quot;, with a written recommendation above a grid of jackets from Macy's, REI, Walmart, and Dick's." width="900" height="507" loading="lazy">
+          <span class="u-meta">
+            <span class="u-host">olio-com.vercel.app</span>
+            <span class="u-title">Olio</span>
+            <span class="u-desc">Tell Olio what you're looking for in your own words. It searches the web and organizes the best options for you.</span>
+          </span>
+        </a>
         <p class="links"><a href="https://github.com/delinakahsay/olio.com" target="_blank" rel="noopener">View code</a></p>
       </article>
 
