@@ -384,8 +384,9 @@ footer{padding-block:46px 72px; margin-top:46px; border-top:1px solid var(--rule
       <article class="card">
         <p class="tag">Live &middot; Built independently &middot; 2026</p>
         <h3>Olio</h3>
-        <p>An AI shopping assistant built to test one question: can describing what you want replace keyword search? A natural-language query becomes structured product results, with accounts, saved items, and a cart that persists across sessions. User testing with ten people cut average search time in half.</p>
-        <p class="stack">React, JavaScript, GPT API, SerpAPI, Supabase, serverless functions</p>
+        <p>An AI shopping assistant built to test one question: can describing what you want replace keyword search? It runs as a tool-calling agent loop rather than a fixed pipeline, so the model decides when to read, how many times to search, and what is worth showing. Reading first is what makes it work. It learns which brands people who know a category actually name, then searches those by name instead of describing the thing, which is the difference between a recommendation and the top of a paid-placement feed.</p>
+        <p>Every correctness rule is enforced in the server, not asked for in the prompt. It described products that had never come back from a search, so presenting without searching is refused. It answered in prose while holding real results, so that is refused too. Fourteen guards, each one traceable to a failure I watched happen, behind 35 tests.</p>
+        <p class="stack">React, Node serverless, OpenAI tool calling, Tavily, SerpAPI, Supabase, Vercel</p>
         <a class="unfurl" href="https://olio-com.vercel.app/" target="_blank" rel="noopener">
           <img src="olio-preview.jpg" alt="Olio returning 12 results for the query &quot;a warm waterproof coat for walking to class in the rain&quot;, with a written recommendation above a grid of jackets from Macy's, REI, Walmart, and Dick's." width="900" height="507" loading="lazy">
           <span class="u-meta">
